@@ -1,1 +1,1 @@
-body{background:#FFCC33}
+html{box-sizing:border-box}*,*::after,*::before{box-sizing:inherit}body{background:-webkit-linear-gradient(red, green) left repeat;background:linear-gradient(red, green) left repeat}
