@@ -5,14 +5,26 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-11-07T00:21:00+09:00</updated>
+  <updated>2016-11-07T02:14:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
+    <title>AWSにRuby on Rails環境</title>
+    <link rel="alternate" href="http://blog.url.com/aws.html"/>
+    <id>http://blog.url.com/aws.html</id>
+    <published>2016-11-07T02:14:00+09:00</published>
+    <updated>2016-11-07T02:16:01+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">
+</content>
+  </entry>
+  <entry>
     <title>blogはじめました。</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/06/launching-my-blog.html"/>
-    <id>http://blog.url.com/2016/11/06/launching-my-blog.html</id>
+    <link rel="alternate" href="http://blog.url.com/launching-my-blog.html"/>
+    <id>http://blog.url.com/launching-my-blog.html</id>
     <published>2016-11-07T00:21:00+09:00</published>
     <updated>2016-11-07T02:06:31+09:00</updated>
     <author>
@@ -24,8 +36,8 @@
   </entry>
   <entry>
     <title>Example Article</title>
-    <link rel="alternate" href="http://blog.url.com/2012/01/01/example-article.html"/>
-    <id>http://blog.url.com/2012/01/01/example-article.html</id>
+    <link rel="alternate" href="http://blog.url.com/example-article.html"/>
+    <id>http://blog.url.com/example-article.html</id>
     <published>2012-01-01T09:00:00+09:00</published>
     <updated>2016-11-07T02:01:43+09:00</updated>
     <author>
