@@ -10,15 +10,16 @@
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>技術ブログつくりたい</title>
+    <title>blogはじめました。</title>
     <link rel="alternate" href="http://blog.url.com/2016/11/06/launching-my-blog.html"/>
     <id>http://blog.url.com/2016/11/06/launching-my-blog.html</id>
     <published>2016-11-07T00:21:00+09:00</published>
-    <updated>2016-11-07T00:23:31+09:00</updated>
+    <updated>2016-11-07T02:06:31+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;これから技術ブログを作成したい&lt;/p&gt;
+    <content type="html">&lt;p&gt;middleman + github.ioでブログ初めました。&lt;/p&gt;
+
 </content>
   </entry>
   <entry>
@@ -26,7 +27,7 @@
     <link rel="alternate" href="http://blog.url.com/2012/01/01/example-article.html"/>
     <id>http://blog.url.com/2012/01/01/example-article.html</id>
     <published>2012-01-01T09:00:00+09:00</published>
-    <updated>2016-11-07T00:20:50+09:00</updated>
+    <updated>2016-11-07T02:01:43+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
