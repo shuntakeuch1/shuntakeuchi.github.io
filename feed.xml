@@ -22,15 +22,24 @@
 </content>
   </entry>
   <entry>
-    <title>blogはじめました。</title>
+    <title>初めてのblog構築</title>
     <link rel="alternate" href="http://blog.url.com/launching-my-blog.html"/>
     <id>http://blog.url.com/launching-my-blog.html</id>
     <published>2016-11-07T00:21:00+09:00</published>
-    <updated>2016-11-07T22:12:43+09:00</updated>
+    <updated>2016-11-09T03:19:42+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;middleman + github.ioでブログ初めました。&lt;/p&gt;
+    <content type="html">&lt;p&gt;middleman4 + github-pagesでブログ構築しました。
+参考にしたのは下記のサイト&lt;/p&gt;
+
+&lt;p&gt;middleman
+・
+github-pages&lt;/p&gt;
+
+&lt;p&gt;middleman4の日本語情報が少なくて四苦八苦しました。
+gemをインストールして動かなくなる回数が多かったので
+versionと依存関係については事前に調査必要だったかも。&lt;/p&gt;
 
 </content>
   </entry>
