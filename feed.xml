@@ -5,26 +5,14 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-11-12T09:10:00+09:00</updated>
+  <updated>2016-11-11T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>markdown</title>
-    <link rel="alternate" href="http://blog.url.com/markdown/"/>
-    <id>http://blog.url.com/markdown/</id>
-    <published>2016-11-12T09:10:00+09:00</published>
-    <updated>2016-11-12T09:10:15+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">
-</content>
-  </entry>
-  <entry>
     <title>PHPでスネークケースの変換</title>
-    <link rel="alternate" href="http://blog.url.com/casechange/"/>
-    <id>http://blog.url.com/casechange/</id>
+    <link rel="alternate" href="http://blog.url.com/2016/11/11/casechange/"/>
+    <id>http://blog.url.com/2016/11/11/casechange/</id>
     <published>2016-11-11T00:00:00+09:00</published>
     <updated>2016-11-12T11:52:20+09:00</updated>
     <author>
@@ -54,8 +42,8 @@ str.camelize #キャメルケースにする
   </entry>
   <entry>
     <title>middleman4 + github-pagesでブログ構築</title>
-    <link rel="alternate" href="http://blog.url.com/launching-my-blog/"/>
-    <id>http://blog.url.com/launching-my-blog/</id>
+    <link rel="alternate" href="http://blog.url.com/2016/11/06/launching-my-blog/"/>
+    <id>http://blog.url.com/2016/11/06/launching-my-blog/</id>
     <published>2016-11-06T00:00:00+09:00</published>
     <updated>2016-11-12T08:44:30+09:00</updated>
     <author>
@@ -74,8 +62,8 @@ versionと依存関係については事前に調査必要だったかも。&lt;
   </entry>
   <entry>
     <title>AWSにRuby on Rails環境</title>
-    <link rel="alternate" href="http://blog.url.com/aws/"/>
-    <id>http://blog.url.com/aws/</id>
+    <link rel="alternate" href="http://blog.url.com/2016/11/06/aws/"/>
+    <id>http://blog.url.com/2016/11/06/aws/</id>
     <published>2016-11-06T00:00:00+09:00</published>
     <updated>2016-11-12T08:25:04+09:00</updated>
     <author>
