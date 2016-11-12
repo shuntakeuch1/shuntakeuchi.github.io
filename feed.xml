@@ -5,16 +5,16 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-11-07T02:14:00+09:00</updated>
+  <updated>2016-11-12T09:10:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>AWSにRuby on Rails環境</title>
-    <link rel="alternate" href="http://blog.url.com/aws.html"/>
-    <id>http://blog.url.com/aws.html</id>
-    <published>2016-11-07T02:14:00+09:00</published>
-    <updated>2016-11-07T02:16:01+09:00</updated>
+    <title>markdown</title>
+    <link rel="alternate" href="http://blog.url.com/markdown/"/>
+    <id>http://blog.url.com/markdown/</id>
+    <published>2016-11-12T09:10:00+09:00</published>
+    <updated>2016-11-12T09:10:15+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -22,11 +22,42 @@
 </content>
   </entry>
   <entry>
+    <title>PHPでスネークケースの変換</title>
+    <link rel="alternate" href="http://blog.url.com/casechange/"/>
+    <id>http://blog.url.com/casechange/</id>
+    <published>2016-11-11T00:00:00+09:00</published>
+    <updated>2016-11-12T11:52:20+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;PHPでキャメルケースからスネークケースに変換&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+// ファイルポインタを開く
+$file = fopen("tmp.txt", "r");
+
+// 1行ずつ読み込みスネークケースにして返す。
+while ($line = fgets($file)) {
+  echo strtolower(preg_replace('/[A-Z]/','_\0',$line));
+}
+// ファイルポインタを閉じる
+fclose($file);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;てかRailsならもっと簡単。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require 'active_support/core_ext/string/inflections'
+str.underscore #スネークケースにする
+str.camelize #キャメルケースにする
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
     <title>middleman4 + github-pagesでブログ構築</title>
-    <link rel="alternate" href="http://blog.url.com/launching-my-blog.html"/>
-    <id>http://blog.url.com/launching-my-blog.html</id>
-    <published>2016-11-07T00:21:00+09:00</published>
-    <updated>2016-11-12T06:52:08+09:00</updated>
+    <link rel="alternate" href="http://blog.url.com/launching-my-blog/"/>
+    <id>http://blog.url.com/launching-my-blog/</id>
+    <published>2016-11-06T00:00:00+09:00</published>
+    <updated>2016-11-12T08:44:30+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -39,6 +70,18 @@ github-pages
 gemをインストールして動かなくなる回数が多かったので
 versionと依存関係については事前に調査必要だったかも。&lt;/p&gt;
 
+</content>
+  </entry>
+  <entry>
+    <title>AWSにRuby on Rails環境</title>
+    <link rel="alternate" href="http://blog.url.com/aws/"/>
+    <id>http://blog.url.com/aws/</id>
+    <published>2016-11-06T00:00:00+09:00</published>
+    <updated>2016-11-12T08:25:04+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">
 </content>
   </entry>
 </feed>

@@ -1,0 +1,8 @@
+<h5 id="blog">初めてのblog構築</h5>
+<p>参考にしたのは下記のサイト
+middleman
+・
+github-pages
+<code>middleman4</code>の日本語情報が少なくて四苦八苦しました。
+gemをインストールして動かなくなる回数が多かったので
+versionと依存関係については事前に調査必要だったかも。</p>
