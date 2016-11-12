@@ -5,10 +5,169 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-11-11T00:00:00+09:00</updated>
+  <updated>2016-11-12T09:10:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Markdown記法</title>
+    <link rel="alternate" href="http://blog.url.com/2016/11/12/markdown/"/>
+    <id>http://blog.url.com/2016/11/12/markdown/</id>
+    <published>2016-11-12T09:10:00+09:00</published>
+    <updated>2016-11-13T01:11:22+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;以前、この記事で「
+&lt;a href="http://shuntakeuchi.github.io/2016/11/06/launching-my-blog/"&gt;Middleman4 + github-pagesでブログ構築&lt;/a&gt;」ブログを構築したのですが&lt;br /&gt;
+Markdownを使うのは初めてなので練習。&lt;/p&gt;
+
+&lt;h2 id="h1"&gt;&lt;strong&gt;見出し&amp;lt;h1&amp;gt;&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;#(シャープ)を1つ付けることで&amp;lt;h1&amp;gt;、##を2つ付けることによって&amp;lt;h2&amp;gt;になる。#を一つずつ&lt;br /&gt;
+増やすことによって&amp;lt;h3&amp;gt;、&amp;lt;h4&amp;gt;・・・と表現できる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#見出し1
+##見出し2
+###見出し3
+####見出し4
+#####見出し5
+#####見出し6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id="section"&gt;見出し1&lt;/h1&gt;
+
+&lt;h2 id="section-1"&gt;見出し2&lt;/h2&gt;
+
+&lt;h3 id="section-2"&gt;見出し3&lt;/h3&gt;
+
+&lt;h4 id="section-3"&gt;見出し4&lt;/h4&gt;
+
+&lt;h5 id="section-4"&gt;見出し5&lt;/h5&gt;
+
+&lt;h5 id="section-5"&gt;見出し6&lt;/h5&gt;
+
+&lt;h2 id="p"&gt;&lt;strong&gt;段落&amp;lt;p&amp;gt;&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;段落の後に空行を入れることで段落&amp;lt;p&amp;gt;となる&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;段落1
+
+段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2
+
+段落3。
+段落3段落3段落3段落3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;段落1&lt;/p&gt;
+
+&lt;p&gt;段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2&lt;/p&gt;
+
+&lt;p&gt;段落3。
+段落3段落3段落3段落3&lt;/p&gt;
+
+&lt;h2 id="br"&gt;&lt;strong&gt;改行&lt;br /&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;行末でスペースを2つ以上を入れる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;スペースなし1。
+スペースなし2。
+
+スペースあり1  
+スペースあり2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;スペースなし1。
+スペースなし2。&lt;/p&gt;
+
+&lt;p&gt;スペースあり1&lt;br /&gt;
+スペースあり2&lt;/p&gt;
+
+&lt;h2 id="section-6"&gt;&lt;strong&gt;強調&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;pre&gt;&lt;code&gt;強調なし  
+*強調(em)*  
+**強調(string)**  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;強調なし&lt;br /&gt;
+&lt;em&gt;強調(em)&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;強調(string)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id="section-7"&gt;&lt;strong&gt;コードブロック&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;段落を変えて4つのスペースを挿入する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;空白なし  
+    空白あり
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;空白なし&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;空白あり
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="section-8"&gt;&lt;strong&gt;リスト&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;数値のリスト&lt;br /&gt;
+数値の後にピリオドを書くと勝手に採番を行う。
+番号が間違っていても大丈夫。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  1. リストの項目1  
+  3. リストの項目2  
+  3. リストの項目3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;リストの項目1&lt;/li&gt;
+  &lt;li&gt;リストの項目2&lt;/li&gt;
+  &lt;li&gt;リストの項目3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="section-9"&gt;&lt;strong&gt;順序なしリスト&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;順序なしリストは段落の先頭で&lt;code&gt;*&lt;/code&gt;,&lt;code&gt;+&lt;/code&gt;,&lt;code&gt;-&lt;/code&gt;と半角スペースで項目を列挙する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* 項目1  
++ 項目2  
+- 項目3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;項目1&lt;/li&gt;
+  &lt;li&gt;項目2&lt;/li&gt;
+  &lt;li&gt;項目3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="section-10"&gt;&lt;strong&gt;リンク&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;pre&gt;&lt;code&gt;これは[リンク](http://shuntakeuchi.github.io)です。   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは&lt;a href="http://shuntakeuchi.github.io"&gt;リンク&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;h2 id="section-11"&gt;&lt;strong&gt;画像&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;これは ![画像](/assets/image/image.png) です。  
+[] の中は画像が存在しない場合に表示されます。 ![画像](xxxx.png)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは &lt;img src="/images/image-b7c51a60.gif" alt="画像" /&gt; です。&lt;br /&gt;
+[] の中は画像が存在しない場合に表示されます。 &lt;img src="/assets/images/xxxx.png" alt="画像" /&gt;&lt;/p&gt;
+
+&lt;p&gt;とりあえずここまでで。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>PHPでスネークケースの変換</title>
     <link rel="alternate" href="http://blog.url.com/2016/11/11/casechange/"/>
@@ -41,35 +200,40 @@ str.camelize #キャメルケースにする
 </content>
   </entry>
   <entry>
-    <title>middleman4 + github-pagesでブログ構築</title>
+    <title>初めてのブログ構築</title>
     <link rel="alternate" href="http://blog.url.com/2016/11/06/launching-my-blog/"/>
     <id>http://blog.url.com/2016/11/06/launching-my-blog/</id>
     <published>2016-11-06T00:00:00+09:00</published>
-    <updated>2016-11-12T08:44:30+09:00</updated>
+    <updated>2016-11-13T01:33:13+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;h5 id="blog"&gt;初めてのblog構築&lt;/h5&gt;
-&lt;p&gt;参考にしたのは下記のサイト
-middleman
-・
-github-pages
-&lt;code&gt;middleman4&lt;/code&gt;の日本語情報が少なくて四苦八苦しました。
-gemをインストールして動かなくなる回数が多かったので
-versionと依存関係については事前に調査必要だったかも。&lt;/p&gt;
+    <content type="html">&lt;p&gt;Middleman4 + Github-pages + BootstrapでCMSを構築いたしました。
+今まで見る専門になっていたので困った事で解決策などを
+共有できればと考えています。&lt;/p&gt;
 
-</content>
-  </entry>
-  <entry>
-    <title>AWSにRuby on Rails環境</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/06/aws/"/>
-    <id>http://blog.url.com/2016/11/06/aws/</id>
-    <published>2016-11-06T00:00:00+09:00</published>
-    <updated>2016-11-12T08:25:04+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">
+&lt;p&gt;まあきっかけはこの本を読んだからなんですが。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.amazon.co.jp/dp/B01GDS0994/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1"&gt;SOFT SKILLS　ソフトウェア開発者の人生マニュアル&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに参考にしたのは下記のサイト。
+ありがとうございました。&lt;/p&gt;
+
+&lt;h4 id="middleman"&gt;Middleman&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://whiskers.nukos.kitchen/2015/02/02/middleman-hello-world.html"&gt;https://whiskers.nukos.kitchen/2015/02/02/middleman-hello-world.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://middlemanapp.com/jp/"&gt;https://middlemanapp.com/jp/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="github-pages"&gt;Github-pages&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://techacademy.jp/magazine/6445"&gt;http://techacademy.jp/magazine/6445&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Middleman4の日本語情報はまだ少ないので落ち着いたらカスタマイズもしたい。gemをインストールして動かなくなる回数が多かったのでVersionについては事前に調査必須かも。&lt;/p&gt;
+
 </content>
   </entry>
 </feed>
