@@ -252,16 +252,4 @@ str.camelize #キャメルケースにする
 
 </content>
   </entry>
-  <entry>
-    <title>AWSにRuby on Rails環境</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/06/aws/"/>
-    <id>http://blog.url.com/2016/11/06/aws/</id>
-    <published>2016-11-06T00:00:00+09:00</published>
-    <updated>2016-11-13T01:37:05+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">
-</content>
-  </entry>
 </feed>
