@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2016/11/22/mysql-start/"/>
     <id>http://blog.url.com/2016/11/22/mysql-start/</id>
     <published>2016-11-22T20:50:00+09:00</published>
-    <updated>2016-11-23T11:52:39+09:00</updated>
+    <updated>2016-11-23T18:51:31+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -24,31 +24,52 @@
 
 &lt;h3 id="section"&gt;数値型&lt;/h3&gt;
 &lt;p&gt;よく使うのはint・float・boolかな。&lt;br /&gt;
-桁数で困るほどそんなに大きい数値を使わない事が多い。&lt;/p&gt;
+桁数で困るほどそんなに大きい数値を使わない事が多い。(42億って。)&lt;/p&gt;
 
-&lt;table&gt;
+&lt;table class="table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;ヘッダー&lt;/th&gt;
-      &lt;th&gt;ボディ&lt;/th&gt;
-      &lt;th&gt;フッター&lt;/th&gt;
+      &lt;th style="text-align: left"&gt;Type&lt;/th&gt;
+      &lt;th style="text-align: left"&gt;ビット数&lt;/th&gt;
+      &lt;th style="text-align: left"&gt;補足&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;パソコン&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style="text-align: left"&gt;bit&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;1-64&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;デフォルトは0&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td style="text-align: left"&gt;tinyint&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0-255&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;符号付きの範囲は-128~127&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;bool&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0-255&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0はfalse,0以外はture&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;int&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0-4294967295&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;-2147483648 - 2147483647&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;bigint&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0-18446744073709551615&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;-9223372036854775808 - 9223372036854775807&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;※M は整数型の最大表示幅を示します。最大表示幅は 255 です。&lt;/p&gt;
+&lt;p&gt;それ以外もsmallintやmidumintなどがあるがintより小さいサイズであり、固定小数点のdecimalや浮動小数点のfloat、doubleなどを選ぶ事ができる。&lt;/p&gt;
+
+&lt;p&gt;個人的にはbool(boolean)が内部的にはtinyintの動きをしているのが衝撃だった。&lt;br /&gt;
+(疑っていたが実際に&lt;a href="http://qiita.com/ritukiii/items/3a3667391d4d65678d82"&gt;調査している人&lt;/a&gt;がいて分かりやすかった。)&lt;/p&gt;
+
+&lt;!-- ###日付型 --&gt;
+&lt;!-- | Type    | ビット数     | 補足                     | --&gt;
 </content>
   </entry>
   <entry>
