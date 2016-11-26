@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2016/11/22/mysql-start/"/>
     <id>http://blog.url.com/2016/11/22/mysql-start/</id>
     <published>2016-11-22T20:50:00+09:00</published>
-    <updated>2016-11-23T18:51:31+09:00</updated>
+    <updated>2016-11-27T02:47:18+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -60,6 +60,11 @@
       &lt;td style="text-align: left"&gt;0-18446744073709551615&lt;/td&gt;
       &lt;td style="text-align: left"&gt;-9223372036854775808 - 9223372036854775807&lt;/td&gt;
     &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt; &lt;/td&gt;
+      &lt;td style="text-align: left"&gt; &lt;/td&gt;
+      &lt;td style="text-align: left"&gt; &lt;/td&gt;
+    &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -68,8 +73,60 @@
 &lt;p&gt;個人的にはbool(boolean)が内部的にはtinyintの動きをしているのが衝撃だった。&lt;br /&gt;
 (疑っていたが実際に&lt;a href="http://qiita.com/ritukiii/items/3a3667391d4d65678d82"&gt;調査している人&lt;/a&gt;がいて分かりやすかった。)&lt;/p&gt;
 
-&lt;!-- ###日付型 --&gt;
-&lt;!-- | Type    | ビット数     | 補足                     | --&gt;
+&lt;h3 id="section-1"&gt;文字列型&lt;/h3&gt;
+
+&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style="text-align: left"&gt;Type&lt;/th&gt;
+      &lt;th style="text-align: left"&gt;長さ&lt;/th&gt;
+      &lt;th style="text-align: left"&gt;補足&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;char&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0-255&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;固定長文字列、長さを省略すると長さは1になる&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;varchar&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;0-65535&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;可変長文字列、UTF8では最大21,844 文字&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;tinytext&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;255&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;長さは指定不可である&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;text&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;1-65535&lt;/td&gt;
+      &lt;td style="text-align: left"&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;mediumtext&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;1-16777215&lt;/td&gt;
+      &lt;td style="text-align: left"&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="text-align: left"&gt;longtext&lt;/td&gt;
+      &lt;td style="text-align: left"&gt;1- 4,294,967,295&lt;/td&gt;
+      &lt;td style="text-align: left"&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;ほかにも画像などのバイナリデータを入れる属性としてcharであればbynary、&lt;br /&gt;
+varcharならばvarbynary、textのblobなどがシノニムとなっている。&lt;/p&gt;
+
 </content>
   </entry>
   <entry>
