@@ -216,6 +216,26 @@ $ git reset --hard ORIG_HEAD
 </content>
   </entry>
   <entry>
+    <title>Rails チュートリアル</title>
+    <link rel="alternate" href="http://blog.url.com/2016/11/12/markdown2/"/>
+    <id>http://blog.url.com/2016/11/12/markdown2/</id>
+    <published>2016-11-12T12:37:00+09:00</published>
+    <updated>2016-12-04T18:08:45+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;先月から進めていた、&lt;a href="http://railstutorial.jp/"&gt;Rails チュートリアル&lt;/a&gt;が一通り終わりました。&lt;/p&gt;
+
+&lt;p&gt;完成版は&lt;a href="https://infinite-dusk-90810.herokuapp.com/"&gt;これ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Railsの主要な機能であるモデル、ビュー、コントローラー、テンプレート、パーシャル、フィルタ、検証、コールバック、has_many/belongs_to through関連付け、セキュリティ、テスティング、デプロイを一通り学べて、Bootstrap、MinitestやSaas、Heroku、S3なども体験できる、Web経験の少ないエンジニアとしては良い体験でした。&lt;br /&gt;
+Rubyについては&lt;a href="http://www.minituku.net/"&gt;Rubyがミニツク&lt;/a&gt;を一通りやってたら頭に入りやすい。&lt;/p&gt;
+
+&lt;p&gt;次は&lt;a href="https://www.amazon.co.jp/dp/B00P0UR1RU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1"&gt;パーフェクトRuby on Rails&lt;/a&gt;などを勉強して見る。&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
     <title>Markdown記法</title>
     <link rel="alternate" href="http://blog.url.com/2016/11/12/markdown/"/>
     <id>http://blog.url.com/2016/11/12/markdown/</id>
@@ -403,43 +423,6 @@ fclose($file);
 str.underscore #スネークケースにする
 str.camelize #キャメルケースにする
 &lt;/code&gt;&lt;/pre&gt;
-</content>
-  </entry>
-  <entry>
-    <title>初めてのブログ構築</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/06/launching-my-blog/"/>
-    <id>http://blog.url.com/2016/11/06/launching-my-blog/</id>
-    <published>2016-11-06T00:00:00+09:00</published>
-    <updated>2016-11-13T01:33:13+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Middleman4 + Github-pages + BootstrapでCMSを構築いたしました。
-今まで見る専門になっていたので困った事で解決策などを
-共有できればと考えています。&lt;/p&gt;
-
-&lt;p&gt;まあきっかけはこの本を読んだからなんですが。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.amazon.co.jp/dp/B01GDS0994/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1"&gt;SOFT SKILLS　ソフトウェア開発者の人生マニュアル&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ちなみに参考にしたのは下記のサイト。
-ありがとうございました。&lt;/p&gt;
-
-&lt;h4 id="middleman"&gt;Middleman&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://whiskers.nukos.kitchen/2015/02/02/middleman-hello-world.html"&gt;https://whiskers.nukos.kitchen/2015/02/02/middleman-hello-world.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://middlemanapp.com/jp/"&gt;https://middlemanapp.com/jp/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id="github-pages"&gt;Github-pages&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="http://techacademy.jp/magazine/6445"&gt;http://techacademy.jp/magazine/6445&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Middleman4の日本語情報はまだ少ないので落ち着いたらカスタマイズもしたい。gemをインストールして動かなくなる回数が多かったのでVersionについては事前に調査必須かも。&lt;/p&gt;
-
 </content>
   </entry>
 </feed>
