@@ -5,10 +5,78 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-11-22T20:50:00+09:00</updated>
+  <updated>2017-05-20T19:44:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>若手エンジニアの生存戦略を聞いてきた。</title>
+    <link rel="alternate" href="http://blog.url.com/2017/05/20/young-enjinear/"/>
+    <id>http://blog.url.com/2017/05/20/young-enjinear/</id>
+    <published>2017-05-20T19:44:00+09:00</published>
+    <updated>2017-05-20T21:36:00+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;サポーターズ主催でMatsが講演する若手エンジニアの生存戦略にいってきました。&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://supporterz-seminar.connpass.com/event/54406/"&gt;https://supporterz-seminar.connpass.com/event/54406/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://supporterzcolab.com/dashboard/"&gt;サポーターズ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- 講演内容はzuckey_17’sさんがはてなで書いてくれています。
+
+- [https://supporterz-seminar.connpass.com/event/54406/
+](https://supporterz-seminar.connpass.com/event/54406/
+) --&gt;
+
+&lt;p&gt;これはただの感想をぶつけるだけの記事なので、講演の内容を知りたいとかであれば他へどうぞ。&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;率直な感想として、IT業界とくにSIで疲弊した私にとって我慢することは何も価値を産まないというのは共感できたし、仕事をすることによって価値を提供するのが働く本質であるという考え方を聞いて、早々に転職を決意した私にとって、すごく気持ちが楽になったというのが感想である。&lt;/p&gt;
+
+&lt;p&gt;もちろん、今更、後悔をしているわけではないが、少し心に引っかかていた部分が取れた気分である。&lt;br /&gt;
+個人的な発見はMatzも学生時代にマクドナルドでアルバイトをしていてインベントリー(棚卸し:材料によっては毎日、毎週、毎月ある)の話をしたのはオッとなるポイントであった。&lt;/p&gt;
+
+&lt;h3 id="section"&gt;自分の生存戦略を作ろう&lt;/h3&gt;
+&lt;p&gt;生存戦略として下記が必要&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;死なないこと&lt;/li&gt;
+  &lt;li&gt;パターン認識能力&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;パターン認識能力は、今までITの分野で成功した人でスティーブジョブスやビル・ゲイツの自伝を読んで、そのまま同じことやっても意味は無いけど成功した人たちで共通した能力としてパターンの認識能力があったよという話。&lt;/p&gt;
+
+&lt;p&gt;死なないことは勝手に解釈すると働きつづけることであり、理不尽にも負けずに頑張るとかではなく、価値を提供し続けることかな。(勝手に解釈)&lt;br /&gt;
+Matzの講演聞いたのはを初めてだったがプログラマの三大美徳を重要視していて、楽しくコードを書き続けるというRubyのコンセプト通りの講演内容でありMatzの戦略というよりかは生き方、経験の話が主だったかな。&lt;/p&gt;
+
+&lt;h2 id="section-1"&gt;まとめ&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;理不尽をしない&lt;/li&gt;
+  &lt;li&gt;我慢をしない。&lt;/li&gt;
+  &lt;li&gt;プログラミングを極めよう&lt;/li&gt;
+  &lt;li&gt;問題解決を極めよう&lt;/li&gt;
+  &lt;li&gt;思い込みを打破しよう&lt;/li&gt;
+  &lt;li&gt;プログラマーは人生の勝ち組(笑)&lt;/li&gt;
+  &lt;li&gt;生存戦略としては差別化すること&lt;/li&gt;
+  &lt;li&gt;大変だがアウトプットをすること クオリティは棚上げして自分の実力が追いつくことがある。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この記事にも書いてあるが
+&lt;a href="https://codeiq.jp/magazine/2017/05/50861/"&gt;プログラマの三大美徳&lt;/a&gt;
+出典元:codeiq&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;怠惰：全体の労力を減らすために手間を惜しまない気質。この気質のも主は、役立つプログラムを書いてみんなの苦労を減らしたり、同じ質問に何度も答えなくても言いように文書を書いたりする。&lt;/p&gt;
+
+  &lt;p&gt;短気：コンピュータが怠惰なときに感じる怒り。この怒りの持ち主は、今ある問題に対応するプログラムにとどまらず、今後起こりうる問題を想定したプログラムを書く。少なくともそうしようとする。よって、プログラマの第二の美徳である。&lt;/p&gt;
+
+  &lt;p&gt;傲慢：神罰が下るほどの過剰な自尊心。または人様に対して恥ずかしくないプログラムを書き、また保守しようとする気質。よって、プログラマの第三の美徳である。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
   <entry>
     <title>mysqlのデータ型</title>
     <link rel="alternate" href="http://blog.url.com/2016/11/22/mysql-start/"/>
@@ -391,37 +459,6 @@ Markdownを使うのは初めてなので練習。&lt;/p&gt;
 [] の中は画像が存在しない場合に表示されます。 &lt;img src="/assets/images/xxxx.png" alt="画像" /&gt;&lt;/p&gt;
 
 &lt;p&gt;とりあえずここまでで。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>PHPでスネークケースの変換</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/11/casechange/"/>
-    <id>http://blog.url.com/2016/11/11/casechange/</id>
-    <published>2016-11-11T00:00:00+09:00</published>
-    <updated>2016-11-12T11:52:20+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;PHPでキャメルケースからスネークケースに変換&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-// ファイルポインタを開く
-$file = fopen("tmp.txt", "r");
-
-// 1行ずつ読み込みスネークケースにして返す。
-while ($line = fgets($file)) {
-  echo strtolower(preg_replace('/[A-Z]/','_\0',$line));
-}
-// ファイルポインタを閉じる
-fclose($file);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;てかRailsならもっと簡単。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;require 'active_support/core_ext/string/inflections'
-str.underscore #スネークケースにする
-str.camelize #キャメルケースにする
-&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>
