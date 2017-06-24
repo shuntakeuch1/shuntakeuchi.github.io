@@ -456,7 +456,7 @@ Markdownを使うのは初めてなので練習。&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これは &lt;img src="/images/image-b7c51a60.gif" alt="画像" /&gt; です。&lt;br /&gt;
-[] の中は画像が存在しない場合に表示されます。 &lt;img src="/assets/images/xxxx.png" alt="画像" /&gt;&lt;/p&gt;
+[] の中は画像が存在しない場合に表示されます。 &lt;img src="/images/xxxx.png" alt="画像" /&gt;&lt;/p&gt;
 
 &lt;p&gt;とりあえずここまでで。&lt;/p&gt;
 </content>
