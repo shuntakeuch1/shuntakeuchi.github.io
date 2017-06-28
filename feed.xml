@@ -5,10 +5,43 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2017-05-20T19:44:00+09:00</updated>
+  <updated>2017-06-28T16:32:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Emacsでバッファ保存時にブラウザをリロードする。</title>
+    <link rel="alternate" href="http://blog.url.com/2017/06/28/save-and-sync/"/>
+    <id>http://blog.url.com/2017/06/28/save-and-sync/</id>
+    <published>2017-06-28T16:32:00+09:00</published>
+    <updated>2017-06-28T18:02:47+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;最近、エディタをatomからEmacsに移行していてatomでは&lt;a href="https://atom.io/packages/browser-refresh"&gt;browser-refresh&lt;/a&gt;というパッケージがありvagrantでWeb開発している時に便利だったのでEmacsで似たようなのが無いか調べた所、applescriptで実現可能そうなのでやってみた。&lt;/p&gt;
+
+&lt;h3 id="applescriptchrome"&gt;applescriptでchromeのアクティブなページを更新するスクリプトの準備&lt;/h3&gt;
+&lt;p&gt;まずはスクリプトエディタを開きreload.scptという名前で~/.emacs.d/script/に保存する。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%882017-06-2817.02.38-6b5ce25f.png" alt="スクリーンショット" /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tell application "Google Chrome" to reload active tab of window 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="initel"&gt;次にinit.elに下記を記載&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;;;chrome更新save-rehash
+(defun reload-chrome ()"Save and reload browser"
+(interactive)
+(save-buffer)
+(shell-command "osascript ~/.emacs.d/script/reload.scpt")
+)
+(global-set-key (kbd "&amp;lt;f5&amp;gt;") 'reload-chrome)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これでF5を押すことによってバッファの保存とchrome更新が同時にできるので効率UP。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>若手エンジニアの生存戦略を聞いてきた。</title>
     <link rel="alternate" href="http://blog.url.com/2017/05/20/young-enjinear/"/>
@@ -300,165 +333,6 @@ Rubyについては&lt;a href="http://www.minituku.net/"&gt;Rubyがミニツク&
 
 &lt;p&gt;次は&lt;a href="https://www.amazon.co.jp/dp/B00P0UR1RU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1"&gt;パーフェクトRuby on Rails&lt;/a&gt;などを勉強して見る。&lt;/p&gt;
 
-</content>
-  </entry>
-  <entry>
-    <title>Markdown記法</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/12/markdown/"/>
-    <id>http://blog.url.com/2016/11/12/markdown/</id>
-    <published>2016-11-12T09:10:00+09:00</published>
-    <updated>2016-11-13T01:11:22+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;以前、この記事で「
-&lt;a href="http://shuntakeuchi.github.io/2016/11/06/launching-my-blog/"&gt;Middleman4 + github-pagesでブログ構築&lt;/a&gt;」ブログを構築したのですが&lt;br /&gt;
-Markdownを使うのは初めてなので練習。&lt;/p&gt;
-
-&lt;h2 id="h1"&gt;&lt;strong&gt;見出し&amp;lt;h1&amp;gt;&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;#(シャープ)を1つ付けることで&amp;lt;h1&amp;gt;、##を2つ付けることによって&amp;lt;h2&amp;gt;になる。#を一つずつ&lt;br /&gt;
-増やすことによって&amp;lt;h3&amp;gt;、&amp;lt;h4&amp;gt;・・・と表現できる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#見出し1
-##見出し2
-###見出し3
-####見出し4
-#####見出し5
-#####見出し6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id="section"&gt;見出し1&lt;/h1&gt;
-
-&lt;h2 id="section-1"&gt;見出し2&lt;/h2&gt;
-
-&lt;h3 id="section-2"&gt;見出し3&lt;/h3&gt;
-
-&lt;h4 id="section-3"&gt;見出し4&lt;/h4&gt;
-
-&lt;h5 id="section-4"&gt;見出し5&lt;/h5&gt;
-
-&lt;h5 id="section-5"&gt;見出し6&lt;/h5&gt;
-
-&lt;h2 id="p"&gt;&lt;strong&gt;段落&amp;lt;p&amp;gt;&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;段落の後に空行を入れることで段落&amp;lt;p&amp;gt;となる&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;段落1
-
-段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2
-
-段落3。
-段落3段落3段落3段落3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;段落1&lt;/p&gt;
-
-&lt;p&gt;段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2段落2&lt;/p&gt;
-
-&lt;p&gt;段落3。
-段落3段落3段落3段落3&lt;/p&gt;
-
-&lt;h2 id="br"&gt;&lt;strong&gt;改行&lt;br /&gt;&lt;/strong&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;行末でスペースを2つ以上を入れる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;スペースなし1。
-スペースなし2。
-
-スペースあり1  
-スペースあり2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;スペースなし1。
-スペースなし2。&lt;/p&gt;
-
-&lt;p&gt;スペースあり1&lt;br /&gt;
-スペースあり2&lt;/p&gt;
-
-&lt;h2 id="section-6"&gt;&lt;strong&gt;強調&lt;/strong&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;pre&gt;&lt;code&gt;強調なし  
-*強調(em)*  
-**強調(string)**  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;強調なし&lt;br /&gt;
-&lt;em&gt;強調(em)&lt;/em&gt;&lt;br /&gt;
-&lt;strong&gt;強調(string)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id="section-7"&gt;&lt;strong&gt;コードブロック&lt;/strong&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;段落を変えて4つのスペースを挿入する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;空白なし  
-    空白あり
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;空白なし&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;空白あり
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id="section-8"&gt;&lt;strong&gt;リスト&lt;/strong&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;数値のリスト&lt;br /&gt;
-数値の後にピリオドを書くと勝手に採番を行う。
-番号が間違っていても大丈夫。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  1. リストの項目1  
-  3. リストの項目2  
-  3. リストの項目3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;リストの項目1&lt;/li&gt;
-  &lt;li&gt;リストの項目2&lt;/li&gt;
-  &lt;li&gt;リストの項目3&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id="section-9"&gt;&lt;strong&gt;順序なしリスト&lt;/strong&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;順序なしリストは段落の先頭で&lt;code&gt;*&lt;/code&gt;,&lt;code&gt;+&lt;/code&gt;,&lt;code&gt;-&lt;/code&gt;と半角スペースで項目を列挙する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;* 項目1  
-+ 項目2  
-- 項目3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;項目1&lt;/li&gt;
-  &lt;li&gt;項目2&lt;/li&gt;
-  &lt;li&gt;項目3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="section-10"&gt;&lt;strong&gt;リンク&lt;/strong&gt;&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;pre&gt;&lt;code&gt;これは[リンク](http://shuntakeuchi.github.io)です。   
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これは&lt;a href="http://shuntakeuchi.github.io"&gt;リンク&lt;/a&gt;です。&lt;/p&gt;
-
-&lt;h2 id="section-11"&gt;&lt;strong&gt;画像&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;これは ![画像](/assets/image/image.png) です。  
-[] の中は画像が存在しない場合に表示されます。 ![画像](xxxx.png)  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これは &lt;img src="/images/image-b7c51a60.gif" alt="画像" /&gt; です。&lt;br /&gt;
-[] の中は画像が存在しない場合に表示されます。 &lt;img src="/images/xxxx.png" alt="画像" /&gt;&lt;/p&gt;
-
-&lt;p&gt;とりあえずここまでで。&lt;/p&gt;
 </content>
   </entry>
 </feed>
