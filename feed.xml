@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2017/11/24/design-pattern/"/>
     <id>http://blog.url.com/2017/11/24/design-pattern/</id>
     <published>2017-11-24T18:20:00+09:00</published>
-    <updated>2017-11-26T00:15:21+09:00</updated>
+    <updated>2017-11-26T00:22:56+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -141,6 +141,8 @@ Strategyパターンを用いることで複数のアルゴリズムを切り替
 &lt;p&gt;あるインスタンスの状態が変化したことを観察し、そのインスタンス自身が状態の変化を通知するしくみを提供するパターンです。
 Observerパターンを用いることで、インスタンスの状態の変更に応じて
 直接呼び出し関係を持たないクラスに「通知」をおこない、処理を呼び出すことが可能になります。&lt;/p&gt;
+
+&lt;h3 id="section-5"&gt;まとめ&lt;/h3&gt;
 
 &lt;p&gt;とりあえず実装してみたのでサンプルコードは&lt;a href="https://github.com/shuntakeuch1/design-pattern-sample"&gt;こちら&lt;/a&gt;&lt;br /&gt;
 今回はJavaで実装してみましたがオブジェクト指向全般に応用できるテクニックなので&lt;br /&gt;
