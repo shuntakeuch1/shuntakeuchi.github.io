@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2017/11/24/design-pattern/"/>
     <id>http://blog.url.com/2017/11/24/design-pattern/</id>
     <published>2017-11-24T18:20:00+09:00</published>
-    <updated>2017-11-25T21:39:58+09:00</updated>
+    <updated>2017-11-26T00:15:21+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -39,7 +39,7 @@
   &lt;li&gt;意思疎通が容易になる。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id="section-2"&gt;生成に関するパターン&lt;/h4&gt;
+&lt;h3 id="section-2"&gt;生成に関するパターン&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;AbstaractFactory 関連する一覧のインスタンスを状況に応じて適切に生成する方法を提供する。&lt;/li&gt;
@@ -76,7 +76,7 @@
 ただし、Singletonパターンを利用する場合は複数の処理が同時にインスタンスを操作しても整合性を損なうことがないよう、
 インスタンスへの多重アクセスを想定した排他処理をおこなうことを考慮する必要があります。&lt;/p&gt;
 
-&lt;h4 id="section-3"&gt;構造に関するパターン&lt;/h4&gt;
+&lt;h3 id="section-3"&gt;構造に関するパターン&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Adapter インターフェースに互換性のないクラス同士を組み合わせる&lt;/li&gt;
   &lt;li&gt;Composite 再帰的な構造の取扱いを容易にする。&lt;/li&gt;
@@ -101,7 +101,7 @@ Adapterパターンは利用したいインターフェースを強制的に変�
 &lt;p&gt;Compositeパターンを用いることで再帰的な構造の記述が容易になり、メンテナンス性も向上させることができます。
 現場のプログラムではツリー構造のデータを表現する際に利用します。&lt;/p&gt;
 
-&lt;h4 id="section-4"&gt;振る舞いに関するパターン&lt;/h4&gt;
+&lt;h3 id="section-4"&gt;振る舞いに関するパターン&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Command 「命令」をインスタンスとして扱うことにより、処理の組合せなどを容易にする。&lt;/li&gt;
@@ -111,25 +111,40 @@ Adapterパターンは利用したいインターフェースを強制的に変�
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Commandパターン
-「命令」自体をインスタンスとして扱うことにより処理の組合せなどを容易にするパターンです。&lt;/p&gt;
+  &lt;p&gt;Commandパターン&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;「命令」自体をインスタンスとして扱うことにより処理の組合せなどを容易にするパターンです。
+Commandの共通インターフェースと、処理の呼び出しをフレームワーク側で実装し、フレームワークの利用者にCommand
+クラスを継承した具体的な処理パターンを実装してもらうという使い方が有効。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Strategyパターン&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;処理アルゴリズムを簡単に切り替えられるようにするパターンで、
+条件によって処理のアルゴリズムだけを切り替えて実行したい場合に有効です。
+Commandパターンと似ているようにみえるかもしれませんが、Commandパターンが「命令」そのものをオブジェクト化し、
+処理対象を内部に保存しているのに対してStrategyパターンは「アルゴリズム」をオブジェクト化しているところが違いになります。
+Strategyパターンを用いることで複数のアルゴリズムを切り替えて利用する場合に見通しの良いコードを書くことができるようになります。&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;Iteratorパターン&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;複数のインスタンスを保有する場合に、各要素に順番にアクセスする方法を提供するパターンです。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Observerパターン&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;あるインスタンスの状態が変化したことを観察し、そのインスタンス自身が状態の変化を通知するしくみを提供するパターンです。
+Observerパターンを用いることで、インスタンスの状態の変更に応じて
+直接呼び出し関係を持たないクラスに「通知」をおこない、処理を呼び出すことが可能になります。&lt;/p&gt;
+
 &lt;p&gt;とりあえず実装してみたのでサンプルコードは&lt;a href="https://github.com/shuntakeuch1/design-pattern-sample"&gt;こちら&lt;/a&gt;&lt;br /&gt;
 今回はJavaで実装してみましたがオブジェクト指向全般に応用できるテクニックなので&lt;br /&gt;
-無駄がなく、品質の高い設計を行うための参考にできれば。&lt;/p&gt;
+無駄がなく、今後の品質の高い設計を行うための参考にできれば。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -137,7 +152,7 @@ Adapterパターンは利用したいインターフェースを強制的に変�
     <link rel="alternate" href="http://blog.url.com/2017/06/28/save-and-sync/"/>
     <id>http://blog.url.com/2017/06/28/save-and-sync/</id>
     <published>2017-06-28T16:32:00+09:00</published>
-    <updated>2017-06-28T18:02:47+09:00</updated>
+    <updated>2017-11-25T21:51:36+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
