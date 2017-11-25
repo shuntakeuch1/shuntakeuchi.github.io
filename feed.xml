@@ -5,10 +5,133 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2017-06-28T16:32:00+09:00</updated>
+  <updated>2017-11-24T18:20:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>デザインパターン 入門</title>
+    <link rel="alternate" href="http://blog.url.com/2017/11/24/design-pattern/"/>
+    <id>http://blog.url.com/2017/11/24/design-pattern/</id>
+    <published>2017-11-24T18:20:00+09:00</published>
+    <updated>2017-11-25T21:01:09+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Java本格入門にデザインパターンの章があったので、勉強のために気になった言葉とサンプルコードを実装してみた。&lt;br /&gt;
+プログラムも組むとなると、時間がかかりますが理解度が深まり私の中で昇華された気分になるので。&lt;/p&gt;
+
+&lt;h3 id="section"&gt;デザインパターンとは&lt;/h3&gt;
+
+&lt;p&gt;クラス構造のベストプラクティスで有名なデザインパターンとして23種類の「Gofデザインパターン」がある。&lt;br /&gt;
+23種類のGofデザインパターンは下記の3種類に分類される。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;オブジェクトの「生成」に関するパターン&lt;/li&gt;
+  &lt;li&gt;プログラムの「構造」に関するパターン&lt;/li&gt;
+  &lt;li&gt;オブジェクトの「振る舞い」に関するパターン&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="section-1"&gt;デザインパターンを利用するメリット&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;再利用性が高い、柔軟な設計ができる。&lt;/li&gt;
+  &lt;li&gt;意思疎通が容易になる。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id="section-2"&gt;生成に関するパターン&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AbstaractFactory 関連する一覧のインスタンスを状況に応じて適切に生成する方法を提供する。&lt;/li&gt;
+  &lt;li&gt;Builder 複合化されたインスタンスの生成過程を隠蔽する。&lt;/li&gt;
+  &lt;li&gt;Singleton あるクラスについてインスタンスが単一であることを保証する。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AbstaractFactoryパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;インスタンスの生成を専門に行うクラス(Factory)を用意することで&lt;br /&gt;
+整合性を保つ必要のある関連するインスタンス群をまちがいなく生成するためのパターンです。&lt;br /&gt;
+現場のプログラムではフレームワークを作成する際に利用することが多いパターンです。
+環境や条件によって処理パターンを切り替えて実行するしくみを実現する際にフレームワークの利用者が、
+具体的な処理の中身を意識することなく透過的に呼び出すことができるのが利点です。&lt;/p&gt;
+
+&lt;p&gt;サンプルは「設定ファイルに記載されたシステムの環境情報によってDBMSを切り替えて利用する」プログラム。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Builderパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;複雑な生成過程が必要となるインスタンスについてその生産過程を隠蔽することにより、
+同じ過程で異なる内部形式のインスタンスを得るパターンです。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Singletonパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;システム内で常に同一のインスタンスを使いまわしたい場合に利用できます。
+このパターンを応用すると「システム内で常に2つのみのインスタンスしか存在しないクラスを作る」と
+いったことも容易にできます。現場のプログラムではシステム内で一意に情報を保持したい場合に用いるパターンです。
+ただし、Singletonパターンを利用する場合は複数の処理が同時にインスタンスを操作しても整合性を損なうことがないよう、
+インスタンスへの多重アクセスを想定した排他処理をおこなうことを考慮する必要があります。&lt;/p&gt;
+
+&lt;h4 id="section-3"&gt;構造に関するパターン&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Adapter インターフェースに互換性のないクラス同士を組み合わせる&lt;/li&gt;
+  &lt;li&gt;Composite 再帰的な構造の取扱いを容易にする。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Adapterパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;インターフェースに互換性のないクラスどうしを組み合わせることを目的とし、
+既存のシステムと新しいシステムのインターフェースの違いを吸収するAdapterを
+用意することで少ない変更で既存のシステムを新しいシステムに適用できるようにします。
+Adapterパターンは利用したいインターフェースを強制的に変えたい場合に利用できます。
+現場のプログラムでは既に存在するクラスを変更することなく、別のインターフェースで呼び出す場合に利用できます。
+あまり推奨されることではありませんがフレームワークを利用している際に「フレームワーク内部の処理をどうしても別の方法で呼びたい」
+といった場合にも利用できる。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Compositeパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Compositeパターンを用いることで再帰的な構造の記述が容易になり、メンテナンス性も向上させることができます。
+現場のプログラムではツリー構造のデータを表現する際に利用します。&lt;/p&gt;
+
+&lt;h4 id="section-4"&gt;振る舞いに関するパターン&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command 「命令」をインスタンスとして扱うことにより、処理の組合せなどを容易にする。&lt;/li&gt;
+  &lt;li&gt;Strategy 戦略を簡単に切り替えられる仕組みを提供する。&lt;/li&gt;
+  &lt;li&gt;Iterator 保有するインスタンスの各要素に順番にアクセスする方法を提供する。&lt;/li&gt;
+  &lt;li&gt;Observer あるインスタンスの状態が変化した際に、そのインスタンス自身が状態の変化を通知するしくみを提供する。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Commandパターン
+「命令」自体をインスタンスとして扱うことにより処理の組合せなどを容易にするパターンです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Strategyパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Iteratorパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Observerパターン&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とりあえず実装してみたのでサンプルコードは&lt;a href="https://github.com/shuntakeuch1/design-pattern-sample"&gt;こちら&lt;/a&gt;&lt;br /&gt;
+今回はJavaで実装してみましたがオブジェクト指向全般に応用できるテクニックなので&lt;br /&gt;
+無駄がなく、品質の高い設計を行うための参考にできれば。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Emacsでバッファ保存時にブラウザをリロードする。</title>
     <link rel="alternate" href="http://blog.url.com/2017/06/28/save-and-sync/"/>
@@ -313,26 +436,6 @@ $ git reset --hard ORIG_HEAD
 &lt;/ul&gt;
 
 &lt;p&gt;取り急ぎ以上。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Rails チュートリアル</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/12/markdown2/"/>
-    <id>http://blog.url.com/2016/11/12/markdown2/</id>
-    <published>2016-11-12T12:37:00+09:00</published>
-    <updated>2016-12-04T18:08:45+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;先月から進めていた、&lt;a href="http://railstutorial.jp/"&gt;Rails チュートリアル&lt;/a&gt;が一通り終わりました。&lt;/p&gt;
-
-&lt;p&gt;完成版は&lt;a href="https://infinite-dusk-90810.herokuapp.com/"&gt;これ&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Railsの主要な機能であるモデル、ビュー、コントローラー、テンプレート、パーシャル、フィルタ、検証、コールバック、has_many/belongs_to through関連付け、セキュリティ、テスティング、デプロイを一通り学べて、Bootstrap、MinitestやSaas、Heroku、S3なども体験できる、Web経験の少ないエンジニアとしては良い体験でした。&lt;br /&gt;
-Rubyについては&lt;a href="http://www.minituku.net/"&gt;Rubyがミニツク&lt;/a&gt;を一通りやってたら頭に入りやすい。&lt;/p&gt;
-
-&lt;p&gt;次は&lt;a href="https://www.amazon.co.jp/dp/B00P0UR1RU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1"&gt;パーフェクトRuby on Rails&lt;/a&gt;などを勉強して見る。&lt;/p&gt;
-
 </content>
   </entry>
 </feed>
