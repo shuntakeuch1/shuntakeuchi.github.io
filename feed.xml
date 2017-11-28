@@ -5,10 +5,55 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2017-11-24T18:20:00+09:00</updated>
+  <updated>2017-11-28T17:01:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ssh接続先の追加</title>
+    <link rel="alternate" href="http://blog.url.com/2017/11/28/ssh_new_connect/"/>
+    <id>http://blog.url.com/2017/11/28/ssh_new_connect/</id>
+    <published>2017-11-28T17:01:00+09:00</published>
+    <updated>2017-11-28T19:39:39+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;受託開発をしているとSSH接続先が増えてくるので&lt;br /&gt;
+新しいssh鍵の作成とタブ補完で案件名と紐付けて接続する方法のメモ。&lt;/p&gt;
+
+&lt;h2 id="ssh"&gt;新しくssh鍵の作成&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh-keygen -t rsa
+# ファイル名をきめて作成
+$ ssh-keygen -f test -t rsa
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="section"&gt;タブ補完に追加&lt;/h2&gt;
+
+&lt;p&gt;~/.ssh/configに下記を追記する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Host test # タブ補完するさいのエイリアス
+  HostName 192.168.1.22 # ドメインでも可能。
+  IdentityFile ~/.ssh/test
+  User rogin_user_name
+  port 22
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これでssh t~って売ってからタブ補完できるようになる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;※&lt;/strong&gt; 先程、躓いたのだがドメインを持っている場合、タブ補完する際に
+先にDNSを探しにいくので仮にtest.localというドメインを持っていてssh t~と打つと先に&lt;strong&gt;test.local&lt;/strong&gt;が補完されてしまうので
+Hostとドメインは同一が好ましい。&lt;/p&gt;
+
+&lt;h2 id="section-1"&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://qiita.com/katsukii/items/2003485dab65bc37a90e"&gt;ssh-keygenコマンドで認証用のキーペア（秘密鍵と公開鍵）を生成する&lt;/a&gt;&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>デザインパターン入門</title>
     <link rel="alternate" href="http://blog.url.com/2017/11/24/design-pattern/"/>
@@ -418,41 +463,6 @@ git://github.com/CakeDC/migrations.git app/Plugin/Migrations
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;以上。詳細はまた、おいおい更新していく予定です。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Gitメモ 特定のログまで戻す</title>
-    <link rel="alternate" href="http://blog.url.com/2016/11/12/markdown3/"/>
-    <id>http://blog.url.com/2016/11/12/markdown3/</id>
-    <published>2016-11-12T12:40:00+09:00</published>
-    <updated>2016-11-16T00:54:31+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;特定のコミット前に戻る。&lt;br /&gt;
-Railsチュートリアルを進めていてあーでもないこうでもないとなって、収集がつかなくなったので戻した時のメモ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# コミットの履歴の確認
-$ git log
-
-commit &amp;lt;ハッシュ値&amp;gt;
-
-# コミット前に戻る
-$ git reset --hard &amp;lt;ハッシュ値&amp;gt;
-
-# 最新の状態に戻る
-$ git reset --hard ORIG_HEAD
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;簡単なオプションの説明として&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;–hard 「HEADの位置・インデックス・ワーキングツリー」全て&lt;/li&gt;
-  &lt;li&gt;–mixed (orオプション無し)「HEADの位置・インデックス」&lt;/li&gt;
-  &lt;li&gt;–soft 「HEADの位置」のみ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;取り急ぎ以上。&lt;/p&gt;
 </content>
   </entry>
 </feed>
